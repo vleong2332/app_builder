@@ -16,6 +16,7 @@ steal(
 			editTitle: 'ab-form-edit-title',
 			editDescription: 'ab-form-edit-description',
 			selectObject: 'ab-form-select-object',
+			selectColumns: 'ab-form-select-columns',
 			isSaveVisible: 'ab-form-save-visible',
 			isCancelVisible: 'ab-form-cancel-visible',
 
@@ -500,6 +501,7 @@ steal(
 					title: propertyValues[componentIds.editTitle],
 					description: propertyValues[componentIds.editDescription] || '',
 					object: propertyValues[componentIds.selectObject] || '', // ABObject.id
+					columns: propertyValues[componentIds.columns] || '',
 					visibleFieldIds: visibleFieldIds, // [ABColumn.id]
 					saveVisible: propertyValues[componentIds.isSaveVisible],
 					cancelVisible: propertyValues[componentIds.isCancelVisible],
@@ -562,6 +564,7 @@ steal(
 						propValues[componentIds.editTitle] = setting.title || '';
 						propValues[componentIds.editDescription] = setting.description || '';
 						propValues[componentIds.selectObject] = setting.object;
+						propValues[componentIds.selectColumns] = setting.columns;
 						propValues[componentIds.isSaveVisible] = setting.saveVisible || 'hide';
 						propValues[componentIds.isCancelVisible] = setting.cancelVisible || 'hide';
 						propValues[componentIds.clearOnLoad] = setting.clearOnLoad || 'no';
